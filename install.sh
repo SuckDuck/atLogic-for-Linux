@@ -1,7 +1,7 @@
 #!/usr/bin/env playonlinux-bash
 
 PLAYONLINUX_PKG="playonlinux4"
-WINE_VERSION="7.18"
+WINE_VERSION="18.1.0-cx"
 PREFIX="atLogic"
 PVERSION="2.4.0.0"
 XMLFIX="PlayOnLinux-atLogic-xml_fix.zip"
@@ -42,7 +42,7 @@ echo $PATH | grep -q "$HOME/bin" || echo 'export PATH=$PATH:~/bin' >> ~/.bashrc
 mkdir $HOME/bin
 cd $HOME/bin
 echo "#/bin/bash
-watchdrop -me .ssp \"$INSTALLDIR\" $PLAYONLINUX_PKG --run atLogic" > ./atLogic
+watchdrop -de .lnk -me .ssp \"$INSTALLDIR\" $PLAYONLINUX_PKG --run atLogic" > ./atLogic
 chmod u+x ./atLogic
 
 
